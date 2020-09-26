@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'miniAmazon';
+
+  menus=["menu1","menu2","menu3"]
 }

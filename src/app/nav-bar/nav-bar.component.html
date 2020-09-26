@@ -1,0 +1,28 @@
+<button mat-button>miniAmazon</button>
+
+<button mat-button [mat-menu-trigger-for]="Categories">Categories</button>
+<mat-menu #Categories="matMenu">
+    <button mat-menu-item [mat-menu-trigger-for]="clothes">Clothes</button>
+    <button mat-menu-item [mat-menu-trigger-for]="mobiles">Mobiles</button>
+</mat-menu>
+
+<mat-menu #clothes="matMenu">
+    <button mat-menu-item [routerLink]="['/Dashboard','Clothes','Mens']">Men's</button>
+    <button mat-menu-item [routerLink]="['/Dashboard','Clothes','Womens']">Women's</button>
+    <button mat-menu-item [routerLink]="['/Dashboard','Clothes','Kids']">Kid's</button>
+</mat-menu>
+
+<mat-menu #mobiles="matMenu">
+    <button mat-menu-item [routerLink]="['/Dashboard','Mobiles','Samsung']">Samsung</button>
+    <button mat-menu-item [routerLink]="['/Dashboard','Mobiles','Apple']">Apple</button>
+    <button mat-menu-item [routerLink]="['/Dashboard','Mobiles','Oneplus']">Oneplus</button>
+    <button mat-menu-item [routerLink]="['/Dashboard','Mobiles','Oppo']">Oppo</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="settings">Settings</button>
+<mat-menu #settings="matMenu">
+    <button mat-menu-item>Account</button>
+    <button mat-menu-item>Language</button>
+    <button mat-menu-item>Sign in</button>
+    <button mat-menu-item>Sign out</button>
+</mat-menu>
